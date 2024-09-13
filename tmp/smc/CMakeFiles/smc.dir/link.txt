@@ -1,0 +1,2 @@
+/usr/bin/ar qc libsmc.a CMakeFiles/smc.dir/AppClass.cpp.o CMakeFiles/smc.dir/AppClass_sm.cpp.o
+/usr/bin/ranlib libsmc.a

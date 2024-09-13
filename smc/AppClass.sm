@@ -1,0 +1,79 @@
+%start Map1::START
+%class AppClass
+%header AppClass.h
+
+%map Map1
+%%
+// State    Transition      End State       Action(s)
+START{
+	    Space	    nil			{}
+	    Unexcept	    nil			{}
+	    PreBegin	    PrBEGIN		{}
+}
+
+PrBEGIN{
+	    Begin	    BEGIN		{}
+}
+
+BEGIN{
+	    Space	    PRE_NAME		{}
+	    Name	    NAME		{NameSpace();}
+	    ExcMark	    NAME		{NameSpace();}
+}
+
+PRE_NAME{
+	    Space	    nil			{}
+	    Name	    NAME		{NameSpace();}
+	    ExcMark	    NAME		{NameSpace();}
+}
+
+NAME{
+	    Space	    SIGN		{UnNameSpace();}
+	    Name	    nil			{pluslen();}
+	    Sign	    SIGN		{UnNameSpace();}
+	    End		    END			{UnNameSpace();}
+}
+
+SIGN{
+	    Space	    nil			{}
+		Sign		PRE_NAME	{}
+	    Name	    NAME		{NameSpace();}
+	    ExcMark	    NAME		{NameSpace();}
+}
+
+END{
+	    Space	    nil			{}
+	    Unexcept	    nil			{}
+	    EOS		    START		{Acceptable();}
+	    
+}
+
+ERROR{
+	    PreBegin	    ERROR		{}
+	    Error	    ERROR		{}
+	    Unexcept	    ERROR		{}
+	    ExcMark	    ERROR		{}
+	    Space	    ERROR		{}
+	    Begin	    ERROR		{}
+	    Name	    ERROR		{}
+	    Sign	    ERROR		{}
+	    End		    ERROR		{}
+	    EOS		    START		{Unacceptable();}
+}
+
+Default{
+	    PreBegin	    ERROR		{}
+	    Error	    ERROR		{}
+	    Unexcept	    ERROR		{}
+	    ExcMark	    ERROR		{}
+            Space           ERROR               {}
+            Begin           ERROR               {}
+            Name            ERROR               {}
+            Sign            ERROR               {}
+            End             ERROR               {}
+            EOS             START               {}
+}
+
+OK{
+}
+%%

@@ -1,0 +1,12 @@
+/home/mikhail/TA/lab1/tmp/CMakeFiles/main.dir
+/home/mikhail/TA/lab1/tmp/CMakeFiles/edit_cache.dir
+/home/mikhail/TA/lab1/tmp/CMakeFiles/rebuild_cache.dir
+/home/mikhail/TA/lab1/tmp/flex/CMakeFiles/flex.dir
+/home/mikhail/TA/lab1/tmp/flex/CMakeFiles/edit_cache.dir
+/home/mikhail/TA/lab1/tmp/flex/CMakeFiles/rebuild_cache.dir
+/home/mikhail/TA/lab1/tmp/regex/CMakeFiles/regex.dir
+/home/mikhail/TA/lab1/tmp/regex/CMakeFiles/edit_cache.dir
+/home/mikhail/TA/lab1/tmp/regex/CMakeFiles/rebuild_cache.dir
+/home/mikhail/TA/lab1/tmp/smc/CMakeFiles/smc.dir
+/home/mikhail/TA/lab1/tmp/smc/CMakeFiles/edit_cache.dir
+/home/mikhail/TA/lab1/tmp/smc/CMakeFiles/rebuild_cache.dir
